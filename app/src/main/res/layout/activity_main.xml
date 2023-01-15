@@ -53,11 +53,19 @@
         android:layout_centerHorizontal="true"
         android:text="Search" />
 
+    <Button
+        android:id="@+id/btnRep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSearch"
+        android:layout_centerHorizontal="true"
+        android:text="Open Repository" />
+
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnSearch"
+        android:layout_below="@id/btnRep"
         android:layout_centerHorizontal="true"
         android:scrollbars="vertical"
         android:textSize="32sp"

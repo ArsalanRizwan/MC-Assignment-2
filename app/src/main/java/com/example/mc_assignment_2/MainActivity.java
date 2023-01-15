@@ -2,6 +2,8 @@ package com.example.mc_assignment_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
@@ -6486,7 +6488,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText surahNum,verseNum;
     TextView res;
-    Button btn;
+    Button btn,btn2;
     int surahNo,surahStartIndex,verseIndex;
 
     @Override
@@ -6496,6 +6498,7 @@ public class MainActivity extends AppCompatActivity {
         surahNum = (EditText) findViewById(R.id.Surah);
         verseNum = (EditText) findViewById(R.id.Verse);
         btn = (Button) findViewById(R.id.btnSearch);
+        btn2 = (Button) findViewById(R.id.btnRep);
         res = (TextView) findViewById(R.id.result);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -6537,6 +6540,15 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 res.setMovementMethod(new ScrollingMovementMethod());
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri webpage = Uri.parse("https://github.com/ArsalanRizwan/MC-Assignment-2");
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
             }
         });
     }
