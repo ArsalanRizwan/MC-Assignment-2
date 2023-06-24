@@ -1,1 +1,1 @@
-# MC-Assignment-2
+# QuranVerseSearchApp
